@@ -1,0 +1,31 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+input[type=text] {
+    width: 50%;
+}
+
+input[type] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.question {
+    width: 500px;
+    border: 15px solid darkred;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.likert li {
+    float: left;
+    list-style-type: none;
+
+}

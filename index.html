@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buzzfeed Survey</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <a href="https://www.buzzfeed.com/" class="center">
+        <img alt="buzzfeed homepage" src="MEDIA/buzzfeed_homepage.png">
+    </a>
+    <form>
+        <div class="question">
+            How do the colours that BuzzFeed's website utilizes make you feel?<br><input type ="text">
+        </div><br>
+
+        <div class="question">
+            <input type="radio"> The use of a navigation bar a satisfactory navigation experience.
+        </div><br>
+
+        <div class="question">
+            <label for="colours" id ="colours">BuzzFeed should display trending articles:</label><br>
+            <select name="colours" id="colours">
+                <option value="side">on the side</option>
+                <option value="gallery">in a gallery at the top</option>
+                <option value="center">in the center of the page</option>
+            </select>
+        </div><br>
+
+        <div class="question">
+            <input type="checkbox" id="quality1" name="quality1" value="pleasant">
+            <label for="quality1">The BuzzFeed website makes use of the space</label><br>
+            <input type="checkbox" id="quality2" name="quality2" value="organized">
+            <label for="quality2">The BuzzFeed website is well organized</label><br>
+            <input type="checkbox" id="quality3" name="quality3" value="navigate">
+            <label for="quality3">The BuzzFeed website is easy to navigate</label><br>
+        </div>
+        <br>
+        <div class="question">
+            How do you rank the BuzzFeed website visually? <ul class="likert">
+            <li> Appealing </li>
+            <li><input type="radio" name="guilty" value="1" /></li>
+            <li><input type="radio" name="guilty" value="2" /></li>
+            <li><input type="radio" name="guilty" value="3" /></li>
+            <li><input type="radio" name="guilty" value="4" /></li>
+            <li><input type="radio" name="guilty" value="5" /></li>
+            <li> Unappealing </li>
+        </ul>
+        </div>
+        <br>
+        <div class="question">
+            Comments:<br><input type ="text">
+        </div>
+        <div class="center">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <div class="center">
+        <footer>
+            Author: Nader El-Ghotmi
+        </footer>
+    </div>
+
+</body>
+
+</html>
