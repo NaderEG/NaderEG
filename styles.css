@@ -13,6 +13,7 @@ input[type] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+    font-family: "DejaVu Sans Mono";
 }
 
 .question {
@@ -21,11 +22,13 @@ input[type] {
     padding: 50px;
     margin-left: auto;
     margin-right: auto;
+    font-family: "DejaVu Sans Mono";
 
 }
 
 .likert li {
     float: left;
     list-style-type: none;
+    font-family: "DejaVu Sans Mono";
 
 }
