@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="english">
+<head>
+    <! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Nader's Fresh Produce</title>
+</head>
+
+<body>
+<form id = "regForm" action ="">
+    <!-- Tab links, each one with an onclick event associated with it -->
+
+    <!-- Tab content -->
+    <div id="Client" class="tab">
+        <div>
+            <h1>Nader's Fresh Produce</h1>
+        </div>
+        <h3>Client Information</h3>
+        <p>Tell us a bit about you.</p>
+        Choose your preferences:
+        <div id="checkboxes">
+            <label>restrictions</label>
+            <ul>
+                <li><input id="veg" type ="checkbox" onchange="populateListProductChoices()"> Vegetarian </li>
+                <li><input id="gluFree" type ="checkbox" onchange="populateListProductChoices()"> Gluten Free </li>
+                <li><input id="org" type ="checkbox" onchange="populateListProductChoices()"> Organic </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id= "banner" class="tab">
+        <button class="tablinks" onclick="openInfo('Vegetables')">Vegetables</button>
+        <button class="tablinks" onclick="openInfo('Meat')">Meat</button>
+        <button class="tablinks" onclick="openInfo('Grain')">Grain</button>
+        <button class="tablinks" onclick="openInfo('Dairy')">Dairy</button>
+        <button class="tablinks" onclick="openInfo('Fruit')">Fruit</button>
+
+    </div>
+
+    <!-- Tab content -->
+    <div id="Vegetables" class="tabcontent" >
+        <h3>Vegetables</h3>
+        <div>
+            <h1>Nader's Fresh Produce</h1>
+        </div>
+        <h3>Your targeted products</h3>
+        <p>We preselected products based on your preferences.</p>
+        Choose items to buy:
+        <div id="vegetableProduct"></div>
+        <button id="addCartVegetable" type="button" class="block" onclick="selectedItems()">
+            Add selected items to cart.
+        </button>
+
+    </div>
+
+    <div id="Meat" class="tabcontent">
+        <h3>Meat</h3>
+        <div>
+            <h1>Nader's Fresh Produce</h1>
+        </div>
+        <h3>Your targeted products</h3>
+        <p>We preselected products based on your preferences.</p>
+        Choose items to buy:
+        <div id="meatProduct"></div>
+        <button id="addCartMeat" type="button" class="block" onclick="selectedItems()">
+            Add selected items to cart.
+        </button>
+
+
+    </div>
+
+    <div id="Grain" class="tabcontent">
+        <h3>Grain</h3>
+        <div>
+            <h1>Nader's Fresh Produce</h1>
+        </div>
+        <h3>Your targeted products</h3>
+        <p>We preselected products based on your preferences.</p>
+        Choose items to buy:
+        <div id="grainProduct"></div>
+        <button id="addCartGrain" type="button" class="block" onclick="selectedItems()">
+            Add selected items to cart.
+        </button>
+
+    </div>
+    <div id="Dairy" class="tabcontent">
+        <h3>Dairy</h3>
+        <div>
+            <h1>Nader's Fresh Produce</h1>
+        </div>
+        <h3>Your targeted products</h3>
+        <p>We preselected products based on your preferences.</p>
+        Choose items to buy:
+        <div id="dairyProduct"></div>
+        <button id="addCartDairy" type="button" class="block" onclick="selectedItems()">
+            Add selected items to cart.
+        </button>
+
+    </div>
+    <div id="Fruit" class="tabcontent">
+        <h3>Fruit</h3>
+        <div>
+            <h1>Nader's Fresh Produce</h1>
+        </div>
+        <h3>Your targeted products</h3>
+        <p>We preselected products based on your preferences.</p>
+        Choose items to buy:
+        <div id="fruitProduct"></div>
+        <button id="addCartFruit" type="button" class="block" onclick="selectedItems()">
+            Add selected items to cart.
+        </button>
+    </div>
+
+
+
+
+    <div id="Cart" class="tab">
+        <div>
+            <h1>Nader's Fresh Produce</h1>
+        </div>
+        <h3>Cart</h3>
+        <p>Here are the contents of your cart.</p>
+        <div id="displayCart"></div>
+    </div>
+
+    <div style="overflow:auto;">
+        <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        </div>
+    </div>
+
+    <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+    </div>
+
+
+
+    <script src="scripts/groceries.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/tab_control.js"></script>
+</form>
+<footer>Nader El-Ghotmi</footer>
+</body>
+</html>
