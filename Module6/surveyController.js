@@ -20,7 +20,7 @@ function writeData(info, fileName){
 // to match with the file names
 // I assume we always just add 1 to a single item
 function combineCounts(name, value){
-    // console.log(value);
+    console.log(value);
     info = readData(name);
      // will be useful for text entry, since the item typed in might not be in the list
     var found = 0;
@@ -42,11 +42,14 @@ module.exports = function(app){
     // when a user goes to localhost:3000/analysis
     // serve a template (ejs file) which will include the data from the data files
     app.get('/analysis', function(req, res){
-        var color = readData("color");
-        var fruit = readData("fruit");
-        var animal = readData("animal");
-        res.render('showResults', {results: [color, fruit, animal]});
-        console.log([color, fruit, animal]);
+        var colors = readData("colors");
+        var navbar = readData("navbar");
+        var comments = readData("comments");
+        var quality = readData("quality");
+        var guilty = readData("guilty");
+        var articles = readData("articles");
+        res.render('showResults', {results: [colors, navbar, articles, quality, guilty, comments]});
+        console.log([colors, navbar, articles, quality, guilty, comments]);
     });
 
     // when a user goes to localhost:3000/niceSurvey
@@ -64,7 +67,7 @@ module.exports = function(app){
         for (var key in json){
             console.log(key + ": " + json[key]);
             // in the case of checkboxes, the user might check more than one
-            if ((key === "color") && (json[key].length === 2)){
+            if ((key === "quality") && (json[key].length === 2)){
                 for (var item in json[key]){
                     combineCounts(key, json[key][item]);
                 }

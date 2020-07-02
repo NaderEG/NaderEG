@@ -14,27 +14,48 @@
   
   <body>
 	
-	<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
+	<div class="container-md p-3 my-3 border bg-dark text-white" id="survey" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
     <h1>Survey</h1>
     <form>
-      <h2> What fruits(s) do you like? </h2>
-      I like:<br>
-      <input type="text" name="fruit" placeholder="fruit name..." required />
+      <h2> How do the colors Buzzfeed's website utilizes make you feel? </h2>
+      <br>
+      <input type="text" name="colors" placeholder="answer here..." required />
       <br>
       <br>
-      <h2> What color(s) do you like? </h2>
-	    I like:<br>
-		  <input type="checkbox" name="color" value="Red"> Red<br>
-		  <input type="checkbox" name="color" value="Green"> Green<br>
-      <input type="checkbox" name="color" value="Blue"> Blue<br>
+      <h2> The use of a navigation bar a satisfactory navigation experience. </h2>
+	    <input type="radio" name="navbar"> Agree
       <br>
-      <h2>What is your favorite animal?</h2>
-      I like:<br>
-      <select name="animal">
-			  <option value="Cat" selected="selected">Cat</option>
-			  <option value="Dog">Dog</option>
-			  <option value="Turtle">Turtle</option>
-      </select>
+      <br>
+      <h2>BuzzFeed should display trending articles:</h2>
+      <label for="articles" id ="articles"></label><br>
+            <select name="articles" id="articles">
+                <option value="side">on the side</option>
+                <option value="gallery">in a gallery at the top</option>
+                <option value="center">in the center of the page</option>
+            </select>
+      <br>
+      <br>
+      <h2> What qualities of the BuzzFeed website do you like? </h2>
+	    I like that:<br>
+		  <input type="checkbox" name="quality" value="Quality1"> The BuzzFeed website makes use of the space<br>
+		  <input type="checkbox" name="quality" value="Quality2"> The BuzzFeed website is well organized<br>
+      <input type="checkbox" name="quality" value="Quality3"> The BuzzFeed website is easy to navigate<br>
+      <br>
+      <h2>How do you rank the BuzzFeed website visually? </h2>
+      
+      <div class="question">
+      <ul class="likert">
+        <li> Appealing </li>
+        <li><input type="radio" name="guilty" value="1" /></li>
+        <li><input type="radio" name="guilty" value="2" /></li>
+        <li><input type="radio" name="guilty" value="3" /></li>
+        <li><input type="radio" name="guilty" value="4" /></li>
+        <li><input type="radio" name="guilty" value="5" /></li>
+        <li> Unappealing </li>
+    </ul>
+      <br>
+      
+      Comments:<br><input type ="text" name="comments">
       <br>
       <br>
       <button type="submit" class="btn btn-warning" id="bb">Submit</button>
